@@ -1,7 +1,6 @@
 package background;
 
-import entity.Entity;
-import main.SimulationPanel;
+import main.MomentumSimulationPanel;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -9,12 +8,12 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Floor extends BackgroundObject{
-    SimulationPanel simulationPanel;
+    MomentumSimulationPanel momentumSimulationPanel;
     public boolean collision = false;
 
-    public Floor(SimulationPanel sP, boolean collision)
+    public Floor(MomentumSimulationPanel sP, boolean collision)
     {
-        simulationPanel = sP;
+        momentumSimulationPanel = sP;
         this.collision = collision;
 
         getImage();

@@ -1,6 +1,6 @@
 package entity;
 
-import main.SimulationPanel;
+import main.MomentumSimulationPanel;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Block extends Entity
 {
-    SimulationPanel simulationPanel;
+    MomentumSimulationPanel momentumSimulationPanel;
     String imageName;
     final int kSize = 1600;
     final int horizontalDistanceFromSides = 150;
@@ -17,9 +17,9 @@ public class Block extends Entity
 
     private double oVelocity, oX, oY;
 
-    public Block(SimulationPanel sP, double velocity, double mass, String imageName, boolean isLeft)
+    public Block(MomentumSimulationPanel sP, double velocity, double mass, String imageName, boolean isLeft)
     {
-        simulationPanel = sP;
+        momentumSimulationPanel = sP;
         this.isLeft = isLeft;
         this.velocity = velocity; this.oVelocity = velocity;
         this.mass = mass;
@@ -35,11 +35,11 @@ public class Block extends Entity
             oX = x;
         }
         else {
-            x = simulationPanel.screenWidth - this.width - horizontalDistanceFromSides;
+            x = momentumSimulationPanel.screenWidth - this.width - horizontalDistanceFromSides;
             oX = x;
         }
 
-        this.y = simulationPanel.screenHeight - simulationPanel.floor.h - this.height;
+        this.y = momentumSimulationPanel.screenHeight - momentumSimulationPanel.floor.h - this.height;
         this.oY = this.y;
         hitbox = new Rectangle( (int) x, (int) y, width, height);
         this.imageName = imageName;
@@ -65,14 +65,14 @@ public class Block extends Entity
             this.area = 160000;
         this.width = (int) Math.sqrt(area);
         this.height  = (int) Math.sqrt(area);
-        this.y = simulationPanel.screenHeight - simulationPanel.floor.h - this.height;
+        this.y = momentumSimulationPanel.screenHeight - momentumSimulationPanel.floor.h - this.height;
         oY = y;
         if (isLeft) {
             x = horizontalDistanceFromSides;
             oX = x;
         }
         else {
-            x = simulationPanel.screenWidth - this.width - horizontalDistanceFromSides;
+            x = momentumSimulationPanel.screenWidth - this.width - horizontalDistanceFromSides;
             oX = x;
         }
     }

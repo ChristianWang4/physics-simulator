@@ -4,8 +4,8 @@ import entity.Entity;
 
 public class ImpulseCalculator
 {
-    SimulationPanel sp;
-    public ImpulseCalculator(SimulationPanel sp)
+    MomentumSimulationPanel sp;
+    public ImpulseCalculator(MomentumSimulationPanel sp)
     {
         this.sp = sp;
     }

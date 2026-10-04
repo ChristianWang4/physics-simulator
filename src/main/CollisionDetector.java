@@ -5,9 +5,9 @@ import entity.Wall;
 
 public class CollisionDetector
 {
-    SimulationPanel sp;
+    MomentumSimulationPanel sp;
 
-    public CollisionDetector(SimulationPanel sp)
+    public CollisionDetector(MomentumSimulationPanel sp)
     {
         this.sp = sp;
     }

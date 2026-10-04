@@ -1,7 +1,7 @@
 package background;
 
 import entity.Entity;
-import main.SimulationPanel;
+import main.MomentumSimulationPanel;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -11,11 +11,11 @@ import java.text.DecimalFormat;
 
 public class BlockInformationPanel extends BackgroundObject
 {
-    SimulationPanel sp;
+    MomentumSimulationPanel sp;
     Entity entity;
     BufferedImage image;
 
-    public BlockInformationPanel(SimulationPanel sp, Entity entity, int x, int y)
+    public BlockInformationPanel(MomentumSimulationPanel sp, Entity entity, int x, int y)
     {
         this.sp = sp;
         this.entity = entity;

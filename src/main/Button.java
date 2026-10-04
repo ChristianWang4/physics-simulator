@@ -13,5 +13,4 @@ public class Button extends JButton
         setFocusPainted(false);
         setOpaque(false);
     }
-
 }

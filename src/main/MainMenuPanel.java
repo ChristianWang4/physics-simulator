@@ -7,19 +7,19 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class MenuPanel extends JPanel
+public class MainMenuPanel extends JPanel
 {
     public final int screenWidth = 1280;
     public final int screenHeight = 720;
     private BufferedImage backgroundImage;
 
-    public MenuPanel() {
+    public MainMenuPanel(String image) {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setDoubleBuffered(true);
         this.setFocusable(true);
         this.setLayout(null);
         try {
-            backgroundImage = ImageIO.read(Objects.requireNonNull(Main.class.getResource("/panels/menu_background.png")));
+            backgroundImage = ImageIO.read(Objects.requireNonNull(Main.class.getResource(image)));
         } catch (IOException | NullPointerException e) {
             System.err.println("Error loading background image: " + e.getMessage());
             this.setBackground(Color.BLACK);

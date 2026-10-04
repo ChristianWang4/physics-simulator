@@ -7,7 +7,7 @@ import entity.Wall;
 import javax.swing.*;
 import java.awt.*;
 
-public class SimulationPanel extends JPanel implements Runnable
+public class MomentumSimulationPanel extends JPanel implements Runnable
 {
     // SCREEN SETTINGS
     public final int screenWidth = 1280;
@@ -34,7 +34,7 @@ public class SimulationPanel extends JPanel implements Runnable
     public boolean hasAlreadyCollided = false;
 
 
-    public SimulationPanel()
+    public MomentumSimulationPanel()
     {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight)); // 1280x720
         this.setBackground(Color.BLACK);
@@ -83,7 +83,6 @@ public class SimulationPanel extends JPanel implements Runnable
 
                 // 2. DRAW: draw the screen w/ updated information
                 repaint();
-
                 try {
                     double remainingTime = nextDrawTime - System.nanoTime();
 
